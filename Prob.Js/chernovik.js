@@ -264,14 +264,188 @@
 ///////////////////////////////////////////////////
              // odiginal
 // Change code below this line
-function addOverNum(...args) {
-  let total = 0;
+// function addOverNum(number, ...args) {
+//   let total = 0;
+//   let argsB = [...args];
+//   if (number > argsB) {
+//     for (const arg of argsB) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+//   // Change code above this line
+//// }
+//   console.log(addOverNum(50, 15, 27));
+// addOverNum(50, 15, 27)
+//////////////////////////////////////////////////////////////
 
-  for (const arg of args) {
-    total += arg;
-  }
-  console.log(total);
-  return total;
-  // Change code above this line
-}
+// function makePizza(result) {
+//   //  console.log(result);
+//    return result;
+// }
+// // Пиши код ниже этой строки
+// const result = 'Ваша пицца готовится, ожидайте.';
+// const pointer = makePizza;
 
+// // console.log(makePizza(result))
+// makePizza(result);
+
+
+
+///////////////////////////////////////
+/////////////4-7
+// const orders = [
+//   { email: 'solomon@topmail.ua', dish: 'Burger' },
+//   { email: 'artemis@coldmail.net', dish: 'Pizza' },
+//   { email: 'jacob@mail.com', dish: 'Taco' },
+// ];
+
+// // Пиши код ниже этой строки
+// function composeMessage(position) {
+
+// return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position +1}-й в очереди.`
+// }
+// const messages = [];
+// let position = 0;
+// for (let i = 0; i < orders.length; i += 1){
+// let mess = composeMessage.call(orders[i], position);
+//     messages.push(mess),
+//       position = messages.length;
+
+// };
+
+
+////////////////////////////////////////////////////////////////////////
+//////////////////4-8
+// const orders = [
+//   { email: "solomon@topmail.ua", dish: "Burger" },
+//   { email: "artemis@coldmail.net", dish: "Pizza" },
+//   { email: "jacob@mail.com", dish: "Taco" },
+// ];
+
+// // Пиши код ниже этой строки
+// function composeMessage(position) {
+//   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+// }
+
+// const messages = [];
+// for (let i = 0; i < orders.length; i++) {
+//   let msg = composeMessage.apply(orders[i], [i + 1]);
+
+
+
+//   messages.push(msg);
+// }
+
+
+// /////////////////////////////////////////////////////////////////////
+// ///////////////////////////4-9
+// const pizzaPalace = {
+//   company: 'Pizza Palace',
+// };
+
+// const burgerShack = {
+//   company: 'Burger Shack',
+// };
+
+// function composeMessage(customerName) {
+//   return `${customerName}, всегда рады вас видеть в «${this.company}».`;
+// }
+// // Пиши код ниже этой строки
+
+// const pizzaPalaceComposer = composeMessage.bind(pizzaPalace);
+// const pizzaPalaceMessage = pizzaPalaceComposer('Манго');
+
+// const burgerShackComposer = composeMessage.bind(burgerShack);
+// const burgerShackMessage = burgerShackComposer('Поли');
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////4б-10з
+// const service = {
+//   mailingList: ['mango@mail.com', 'poly@hotmail.de', 'ajax@jmail.net'],
+//   subscribe(email) {
+//     this.mailingList.push(email);
+//     return `Почта ${email} добавлена в рассылку.`;
+//   },
+//   unsubscribe(email) {
+//     this.mailingList = this.mailingList.filter((e) => e !== email);
+//     return `Почта ${email} удалена из рассылки.`;
+//   },
+// };
+
+// function logAndInvokeAction(email, action) {
+//   console.log(`Выполняем действие с ${email}.`);
+//   return action(email);
+// }
+
+// const firstInvoke = logAndInvokeAction('kiwi@mail.uk', service.subscribe.bind(service));
+// console.log(firstInvoke);
+// // Почта kiwi@mail.uk добавлена в рассылку.
+
+// console.log(service.mailingList);
+// /* ['mango@mail.com', 
+//     'poly@hotmail.de', 
+//     'ajax@jmail.net', 
+//     'kiwi@mail.uk']*/
+// const secondInvoke = logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service));
+// console.log(secondInvoke);
+// // Почта poly@hotmail.de удалена из рассылки.
+
+// console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
+/////////////////////////////////
+
+
+
+const Storage = function (items){
+ this.items = items;
+};
+
+Storage.prototype.getItems = function () {
+  return this.items;
+};
+
+Storage.prototype.addItem = function (newItem) {
+//  for(let it of this.items){ 
+    //this.items = newItem;
+           this.items.push(newItem)               
+     //}
+  
+};
+
+Storage.prototype.removeItem = function (item) {
+  for (let i = 0;i < storage.length; i ++){
+  	if (item === i){
+  	return this.items.splice(item, 1);
+       
+    };
+      
+
+  };
+};
+//let items = [];
+// Пиши код выше этой строки
+const storage = new Storage(['Нанитоиды', 'Пролонгер', 'Антигравитатор']);
+console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
+storage.addItem('Дроид');
+console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
+storage.removeItem('Пролонгер');
+console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
+
+
+//function User({ name, email }) {
+//  this.name = name;
+//  this.email = email;
+//}
+
+//User.prototype.getEmail = function () {
+//  return this.email;
+//};
+
+//User.prototype.changeEmail = function (newEmail) {
+//  this.email = newEmail;
+//};
+
+//const mango = new User({ name: 'Манго', email: 'mango@mail.com' });
+
+//console.log(mango.getEmail()); // mango@mail.com
+//mango.changeEmail('mango@supermail.com');
+//console.log(mango.getEmail()); // mango@supermail.com
