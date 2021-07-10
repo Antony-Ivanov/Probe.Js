@@ -395,40 +395,40 @@
 
 
 
-const Storage = function (items){
- this.items = items;
-};
+// const Storage = function (items){
+//  this.items = items;
+// };
 
-Storage.prototype.getItems = function () {
-  return this.items;
-};
+// Storage.prototype.getItems = function () {
+//   return this.items;
+// };
 
-Storage.prototype.addItem = function (newItem) {
-//  for(let it of this.items){ 
-    //this.items = newItem;
-           this.items.push(newItem)               
-     //}
+// Storage.prototype.addItem = function (newItem) {
+// //  for(let it of this.items){ 
+//     //this.items = newItem;
+//            this.items.push(newItem)               
+//      //}
   
-};
+// };
 
-Storage.prototype.removeItem = function (item) {
-  for (let i = 0;i < storage.length; i ++){
-  	if (item === i){
-  	return this.items.splice(item, 1);
+// Storage.prototype.removeItem = function (item) {
+//   for (let i = 0;i < storage.length; i ++){
+//   	if (item === i){
+//   	return this.items.splice(item, 1);
        
-    };
+//     };
       
 
-  };
-};
-//let items = [];
-// Пиши код выше этой строки
-const storage = new Storage(['Нанитоиды', 'Пролонгер', 'Антигравитатор']);
-console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
-storage.addItem('Дроид');
-console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
-storage.removeItem('Пролонгер');
-console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
+//   };
+// };
+// //let items = [];
+// // Пиши код выше этой строки
+// const storage = new Storage(['Нанитоиды', 'Пролонгер', 'Антигравитатор']);
+// console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
+// storage.addItem('Дроид');
+// console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
+// storage.removeItem('Пролонгер');
+// console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
 
 
 //function User({ name, email }) {
@@ -449,3 +449,53 @@ console.log(storage.getItems()); // ["Нанитоиды", "Антигравит
 //console.log(mango.getEmail()); // mango@mail.com
 //mango.changeEmail('mango@supermail.com');
 //console.log(mango.getEmail()); // mango@supermail.com
+///////////////////////////////////////////////////////
+
+//let obj = {};
+// function StringBuilder(baseValue){
+//   this.value = baseValue;
+// };
+
+
+// // Пиши код выше этой строки
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // '.'
+// builder.padStart('^');
+// console.log(builder.getValue()); // '^.'
+// builder.padEnd('^');
+// console.log(builder.getValue()); // '^.^'
+// builder.padBoth('=');
+// console.log(builder.getValue()); // '=^.^='
+////////////////////////////////////
+//////15-5class Car {
+  // Пиши код ниже этой строки
+//   static MAX_PRICE = 50000;
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }; 
+
+//   set price(newPrice) {
+//     if(newPrice <= Car.MAX_PRICE){
+//       return this.#price = newPrice;
+//     }       
+//       return newPrice; 
+//   }
+//   // Пиши код выше этой строки
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+////////////////////////////////////////////////////////////
+/////////////////////
